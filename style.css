@@ -1,0 +1,476 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+@font-face {
+  font-family: 'SuzukiPROHeadline';
+  src: url("./fonts/SuzukiPROHeadline.ttf");
+}
+
+@font-face {
+  font-family: 'SuzukiPRORegular';
+  src: url("./fonts/SuzukiPRORegular.ttf");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Bold';
+  src: url("./fonts/HelveticaNeueCyr-Bold.ttf");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Roman';
+  src: url("./fonts/HelveticaNeueCyr-Roman.ttf");
+}
+
+@font-face {
+  font-family: 'HelveticaNeueCyr-Medium';
+  src: url("./fonts/HelveticaNeueCyr-Medium.ttf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.top-bar {
+  width: 60%;
+  height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.top-bar__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.top-bar__left img {
+  padding-right: 15px;
+}
+
+.top-bar__left .top-bar-info {
+  padding-left: 25px;
+  font-family: 'SuzukiPRORegular';
+  font-size: 14px;
+}
+
+.top-bar__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.top-bar__right .top-bar-number {
+  font-family: 'SuzukiPROHeadline';
+  font-size: 25px;
+}
+
+.top-bar__right .top-bar-call {
+  font-family: 'SuzukiPRORegular';
+  font-size: 14px;
+  color: #005AAD;
+  text-decoration: none;
+}
+
+.header, .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header .banner-wrapper, .footer .banner-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 60px;
+  margin-top: 18px;
+}
+
+.header .banner-wrapper .banner, .footer .banner-wrapper .banner {
+  width: 100%;
+  min-height: 695px;
+  height: 100%;
+  -webkit-transition: .7s;
+  transition: .7s;
+}
+
+.header .banner-wrapper .banner .banner-info, .footer .banner-wrapper .banner .banner-info {
+  padding: 93px 0 0 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-size: cover;
+}
+
+.header .banner-wrapper .banner .banner-info .banner-name, .footer .banner-wrapper .banner .banner-info .banner-name {
+  color: #fff;
+  font-family: 'SuzukiPRORegular';
+  font-size: 38.52px;
+}
+
+.header .banner-wrapper .banner .banner-info .banner-price, .footer .banner-wrapper .banner .banner-info .banner-price {
+  color: #fff;
+  font-family: 'SuzukiPROHeadline';
+  font-size: 84px;
+}
+
+.header .banner-wrapper .banner .banner-info .banner-button, .footer .banner-wrapper .banner .banner-info .banner-button {
+  color: #fff;
+  font-family: 'SuzukiPRORegular';
+  font-size: 18px;
+  width: 270px;
+  height: 66px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #005AAD;
+  text-transform: uppercase;
+  margin-top: 16px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header .banner-wrapper .banner .banner-info .banner-button:hover, .footer .banner-wrapper .banner .banner-info .banner-button:hover {
+  background-color: #fff;
+  color: #005AAD;
+}
+
+.header .banner-wrapper .banner-2, .footer .banner-wrapper .banner-2 {
+  background: url("./img/banner2.jpg") no-repeat;
+}
+
+.header .banner-wrapper .banner-1, .footer .banner-wrapper .banner-1 {
+  background: url("./img/banner.jpg") no-repeat;
+}
+
+.header .banner-wrapper .banner-unactive, .footer .banner-wrapper .banner-unactive {
+  display: none;
+}
+
+.header .banner-wrapper .banner-nav, .footer .banner-wrapper .banner-nav {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: -139px 0 0 17%;
+}
+
+.header .banner-wrapper .banner-nav-left, .footer .banner-wrapper .banner-nav-left {
+  margin-right: 16px;
+}
+
+.header .banner-wrapper .banner-nav-left, .header .banner-wrapper .banner-nav-right, .footer .banner-wrapper .banner-nav-left, .footer .banner-wrapper .banner-nav-right {
+  height: 10px;
+  width: 70px;
+  border-bottom: 2px solid #005AAD;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.header .banner-wrapper .banner-nav-active, .footer .banner-wrapper .banner-nav-active {
+  border-bottom: 4px solid #fff;
+}
+
+.header .bot-bar, .footer .bot-bar {
+  width: 100%;
+  margin-top: -50px;
+}
+
+.header .bot-bar-container, .footer .bot-bar-container {
+  background-color: #EBEBEB;
+  height: 413px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .bot-bar-item, .footer .bot-bar-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: transparent;
+  padding: 110px 120px 60px 120px;
+  cursor: pointer;
+}
+
+.header .bot-bar-item__name, .footer .bot-bar-item__name {
+  font-size: 30px;
+  font-family: 'SuzukiPROHeadline';
+}
+
+.header .bot-bar-item__image, .footer .bot-bar-item__image {
+  padding-top: 12px;
+  width: 340px;
+  height: 230px;
+}
+
+.header .bot-bar .selected, .footer .bot-bar .selected {
+  background-color: #fff;
+}
+
+.header .bot-bar .selected .bot-bar-item__name, .footer .bot-bar .selected .bot-bar-item__name {
+  color: #005AAD;
+}
+
+.cars {
+  margin: 80px auto 90px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 70%;
+}
+
+.cars .car {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 25px 15px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cars .car__name {
+  font-size: 20px;
+  font-family: 'SuzukiPRORegular';
+}
+
+.cars .car__tech-info {
+  width: 100%;
+  color: gray;
+}
+
+.cars .car__tech-info .car__tech {
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.cars .car__tech-info .car__tech .dots {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0;
+          flex: 1 0;
+  border-bottom: 2px dotted gray;
+  height: 1em;
+  margin: 0 .4em;
+}
+
+.cars .car__button {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 1px solid #005AAD;
+  color: #005AAD;
+  cursor: pointer;
+}
+
+.cars .car__button--buy {
+  border: none;
+  font-size: 20px;
+  font-family: 'SuzukiPROHeadline';
+  background-color: #005AAD;
+  color: #fff;
+  margin-top: 5px;
+}
+
+.prize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.prize .prize-text {
+  font-family: 'SuzukiPROHeadline';
+  font-size: 42px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.prize .prize-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+}
+
+.prize .prize-cards .prize-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  margin-right: 30px;
+}
+
+.prize .prize-cards .prize-card img {
+  padding: 18px;
+}
+
+.prize .prize-cards .prize-card span {
+  padding-bottom: 33px;
+  font-family: 'SuzukiPROHeadline';
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.prize .bluefill {
+  width: 100%;
+  height: 670px;
+  background-color: #005AAD;
+  margin-top: -205px;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.prize .bluefill .bluefill-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 200px;
+  margin-left: 112px;
+}
+
+.prize .bluefill .bluefill-cards .bluefill-card {
+  margin-right: 112px;
+  max-width: 240px;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.prize .bluefill .bluefill-cards .bluefill-card h3 {
+  padding: 30px 0 10px 0;
+  font-family: 'SuzukiPROHeadline';
+  font-size: 30px;
+}
+
+.prize .bluefill .bluefill-cards .bluefill-card span {
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+#map {
+  width: 100%;
+  height: 613px;
+}
+
+.footer {
+  height: 90px;
+  background-color: #000;
+  color: #fff;
+}
+
+.footer .top-bar-call {
+  color: #fff;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/*# sourceMappingURL=style.css.map */
