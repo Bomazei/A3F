@@ -39,7 +39,6 @@ $color-blue: #005AAD;
 }
 .top-bar {
     width: 60%;
-    height: 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,11 +83,10 @@ $color-blue: #005AAD;
         margin-top: 18px;
         
         .banner {
-        
+            position: relative;
             width: 100%;
-            min-height: 695px;
-            height: 100%;
-            transition: .7s;
+            height: calc((102vw)/3);
+            transition: .7s;  
             .banner-info {
                 padding: 93px 0 0 18%;
                 display: flex;
@@ -123,27 +121,32 @@ $color-blue: #005AAD;
                         color: $color-blue;
                         
                     }
+                    
                 }
                 
             }
         }
-        
+        .banner-1 {
+            background: url('./img/banner.jpg') no-repeat;
+            background-size: contain;
+        }
         .banner-2 {
             
             background: url('./img/banner2.jpg') no-repeat;
+            background-size: contain;
         }
-        .banner-1 {
-            
-            background: url('./img/banner.jpg') no-repeat;
-            
-        }
+        
         .banner-unactive {
+            
             display: none;
         }
+        
         .banner-nav {
             position: absolute;
+            z-index: 100;
             display: flex;
-            margin: -139px 0 0 17%;
+            left: 20%;
+            bottom: 20%;
             
             &-left  {
                 margin-right: 16px;
@@ -185,8 +188,7 @@ $color-blue: #005AAD;
             }
             &__image {
                 padding-top: 12px;
-                width: 340px;
-                height: 230px;
+               
             }
         }
         .selected {
@@ -270,7 +272,9 @@ $color-blue: #005AAD;
         margin-bottom: 80px;
     }
     .prize-cards {
+        z-index: 10;
         display: flex;
+        flex-wrap: wrap;
         margin-left: 30px;
         .prize-card {
             display: flex;
@@ -295,12 +299,12 @@ $color-blue: #005AAD;
         
         background-color: $color-blue;
         margin-top: -205px;
-        z-index: -1;
         display: flex;
         justify-content: center;
         align-items: center;
         .bluefill-cards {
             display: flex;
+            justify-content: center;
             margin-top: 200px;
             margin-left: 112px;
             .bluefill-card {
@@ -339,5 +343,237 @@ $color-blue: #005AAD;
         color: #fff;
         text-decoration: underline dotted;
         
+    }
+}
+
+
+@media screen and (max-width:1439px) {
+    .top-bar {
+        width: 80%;
+    }
+    .header {
+        .bot-bar-item {
+            padding: 20px 30px;
+        }
+        .banner-wrapper {
+            .banner {
+                .banner-info {
+                    padding: 30px 0 0 5%;
+                    .banner-name {
+                        font-size: 28px;
+                    }
+                    .banner-price {
+                        font-size: 72px;
+                    }
+                    .banner-button {
+                        margin: 0;
+                    }
+                }
+                
+            }
+            .banner-nav {
+                left: 10%;
+            }
+        }
+    }
+
+    .prize {
+        .prize-cards {
+            .prize-card {
+                img {
+                    width: 300px;
+                }
+                
+            }
+        }
+        .bluefill {
+            height: 590px;
+        }
+    }
+}
+@media screen and (max-width:900px) {
+    #map {
+        height: 600px;
+    }
+    .top-bar{
+        width: 95%;
+    }
+    .bot-bar-item {
+        &__image {
+            width: 300px;
+        }
+    }
+    .header {
+        .banner-wrapper {
+            padding: 0 10px;
+            
+            .banner {
+                height: calc(77vh/2);
+                .banner-info {
+                    padding: 30px 0 0 5%;
+                    .banner-name {
+                        font-size: 22px;
+                    }
+                    .banner-price {
+                        font-size: 50px;
+                    }
+                    .banner-button {
+                        margin: 0;
+                        width: 220px;
+                        height: 50px;
+                        
+                    }
+                }   
+            }
+            .banner-nav {
+                bottom: 30px;
+                left: 6%;
+            }
+        }
+    }
+
+    .cars {
+       
+        .car {
+            padding: 25px 4px;
+            width: 230px;
+            &__image {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .prize {
+        .prize-text{
+            margin-bottom: 50px;
+        }
+        .prize-cards {
+            .prize-card {
+                img {
+                    width: 210px;
+                }
+                span {
+                    font-size: 16px;
+                }
+                
+            }
+        }
+        .bluefill {
+            height: 520px;
+            .bluefill-cards {
+                justify-content: center;
+                margin-left: 30px;
+                .bluefill-card {
+                    max-width: 200px;
+                    
+                    margin-right: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:425px) {
+    .top-bar {
+        
+        &__left {
+            flex-direction: column;
+            align-items: flex-start;
+            img {
+                padding: 0;
+            }
+            .top-bar-info {
+                padding: 0;
+            }
+        }
+        &__right {
+            .top-bar-number {
+                font-size: 16px;
+            }
+        }
+    }
+    .bot-bar{
+        display: none;
+    }
+
+    .header {
+        .banner-wrapper {
+            .banner {
+                height: 220px;
+                background-color: #fff;
+                border: 2px solid $color-blue;
+                .banner-info {
+                    .banner-price {
+                        font-size: 34px;
+                        padding-bottom: 5%;
+                    }
+                    .banner-button {
+                        width: 94%;
+                        height: 70px;
+                        font-size: 22px;
+                        border-radius: 5px;
+                    }
+                }
+            }
+            .banner-nav {
+                bottom: 10px;
+                left: 9%;
+                &-active {
+                    background-color: $color-blue;
+                    border: none;
+                }
+            }
+            
+        }
+    }
+    .prize {
+        background-color: $color-blue;
+        .prize-text {
+            background-color: #fff;
+            margin-top: -1px;
+        }
+        .prize-cards {
+            margin-bottom: 30px;
+            flex-direction: column;
+            .prize-card {
+                margin-bottom: 20px;
+            }
+        }
+
+        .bluefill{
+            height: 100%;
+            .bluefill-cards {
+                
+                flex-direction: column;
+                .bluefill-card {
+                    margin-bottom: 30px;
+                    h3 {
+                        padding: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        .banner-wrapper {
+            .banner {
+                .banner-info {
+                    padding-top: 10px;
+                    .banner-name {
+                        width: 150px;
+                    }
+                    .banner-price {
+                        font-size: 30px;
+                    }
+                }
+            }
+        }
+    }
+    #map {
+        height: 500px;
     }
 }

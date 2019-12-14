@@ -33,7 +33,6 @@
 
 .top-bar {
   width: 60%;
-  height: 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -111,9 +110,9 @@
 }
 
 .header .banner-wrapper .banner, .footer .banner-wrapper .banner {
+  position: relative;
   width: 100%;
-  min-height: 695px;
-  height: 100%;
+  height: calc((102vw)/3);
   -webkit-transition: .7s;
   transition: .7s;
 }
@@ -170,12 +169,14 @@
   color: #005AAD;
 }
 
-.header .banner-wrapper .banner-2, .footer .banner-wrapper .banner-2 {
-  background: url("./img/banner2.jpg") no-repeat;
-}
-
 .header .banner-wrapper .banner-1, .footer .banner-wrapper .banner-1 {
   background: url("./img/banner.jpg") no-repeat;
+  background-size: contain;
+}
+
+.header .banner-wrapper .banner-2, .footer .banner-wrapper .banner-2 {
+  background: url("./img/banner2.jpg") no-repeat;
+  background-size: contain;
 }
 
 .header .banner-wrapper .banner-unactive, .footer .banner-wrapper .banner-unactive {
@@ -184,10 +185,12 @@
 
 .header .banner-wrapper .banner-nav, .footer .banner-wrapper .banner-nav {
   position: absolute;
+  z-index: 100;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: -139px 0 0 17%;
+  left: 20%;
+  bottom: 20%;
 }
 
 .header .banner-wrapper .banner-nav-left, .footer .banner-wrapper .banner-nav-left {
@@ -249,8 +252,6 @@
 
 .header .bot-bar-item__image, .footer .bot-bar-item__image {
   padding-top: 12px;
-  width: 340px;
-  height: 230px;
 }
 
 .header .bot-bar .selected, .footer .bot-bar .selected {
@@ -369,9 +370,12 @@
 }
 
 .prize .prize-cards {
+  z-index: 10;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-left: 30px;
 }
 
@@ -406,7 +410,6 @@
   height: 670px;
   background-color: #005AAD;
   margin-top: -205px;
-  z-index: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -422,6 +425,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 200px;
   margin-left: 112px;
 }
@@ -472,5 +478,194 @@
   color: #fff;
   -webkit-text-decoration: underline dotted;
           text-decoration: underline dotted;
+}
+
+@media screen and (max-width: 1439px) {
+  .top-bar {
+    width: 80%;
+  }
+  .header .bot-bar-item {
+    padding: 20px 30px;
+  }
+  .header .banner-wrapper .banner .banner-info {
+    padding: 30px 0 0 5%;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-name {
+    font-size: 28px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-price {
+    font-size: 72px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-button {
+    margin: 0;
+  }
+  .header .banner-wrapper .banner-nav {
+    left: 10%;
+  }
+  .prize .prize-cards .prize-card img {
+    width: 300px;
+  }
+  .prize .bluefill {
+    height: 590px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #map {
+    height: 600px;
+  }
+  .top-bar {
+    width: 95%;
+  }
+  .bot-bar-item__image {
+    width: 300px;
+  }
+  .header .banner-wrapper {
+    padding: 0 10px;
+  }
+  .header .banner-wrapper .banner {
+    height: calc(77vh/2);
+  }
+  .header .banner-wrapper .banner .banner-info {
+    padding: 30px 0 0 5%;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-name {
+    font-size: 22px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-price {
+    font-size: 50px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-button {
+    margin: 0;
+    width: 220px;
+    height: 50px;
+  }
+  .header .banner-wrapper .banner-nav {
+    bottom: 30px;
+    left: 6%;
+  }
+  .cars .car {
+    padding: 25px 4px;
+    width: 230px;
+  }
+  .cars .car__image img {
+    width: 100%;
+  }
+  .prize .prize-text {
+    margin-bottom: 50px;
+  }
+  .prize .prize-cards .prize-card img {
+    width: 210px;
+  }
+  .prize .prize-cards .prize-card span {
+    font-size: 16px;
+  }
+  .prize .bluefill {
+    height: 520px;
+  }
+  .prize .bluefill .bluefill-cards {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-left: 30px;
+  }
+  .prize .bluefill .bluefill-cards .bluefill-card {
+    max-width: 200px;
+    margin-right: 30px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .top-bar__left {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .top-bar__left img {
+    padding: 0;
+  }
+  .top-bar__left .top-bar-info {
+    padding: 0;
+  }
+  .top-bar__right .top-bar-number {
+    font-size: 16px;
+  }
+  .bot-bar {
+    display: none;
+  }
+  .header .banner-wrapper .banner {
+    height: 220px;
+    background-color: #fff;
+    border: 2px solid #005AAD;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-price {
+    font-size: 34px;
+    padding-bottom: 5%;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-button {
+    width: 94%;
+    height: 70px;
+    font-size: 22px;
+    border-radius: 5px;
+  }
+  .header .banner-wrapper .banner-nav {
+    bottom: 10px;
+    left: 9%;
+  }
+  .header .banner-wrapper .banner-nav-active {
+    background-color: #005AAD;
+    border: none;
+  }
+  .prize {
+    background-color: #005AAD;
+  }
+  .prize .prize-text {
+    background-color: #fff;
+    margin-top: -1px;
+  }
+  .prize .prize-cards {
+    margin-bottom: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prize .prize-cards .prize-card {
+    margin-bottom: 20px;
+  }
+  .prize .bluefill {
+    height: 100%;
+  }
+  .prize .bluefill .bluefill-cards {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .prize .bluefill .bluefill-cards .bluefill-card {
+    margin-bottom: 30px;
+  }
+  .prize .bluefill .bluefill-cards .bluefill-card h3 {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .header .banner-wrapper .banner .banner-info {
+    padding-top: 10px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-name {
+    width: 150px;
+  }
+  .header .banner-wrapper .banner .banner-info .banner-price {
+    font-size: 30px;
+  }
+  #map {
+    height: 500px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
