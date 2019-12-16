@@ -104,9 +104,8 @@
 
 .header .banner-wrapper, .footer .banner-wrapper {
   position: relative;
-  width: 100%;
-  padding: 0 60px;
-  margin-top: 18px;
+  width: 90%;
+  margin: 20px auto 0 auto;
   height: calc((99vw)/3);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -116,7 +115,7 @@
 
 .header .banner-wrapper .banner, .footer .banner-wrapper .banner {
   position: absolute;
-  width: 100%;
+  min-width: 100%;
   height: 100%;
   -webkit-transition: 1s;
   transition: 1s;
@@ -175,17 +174,17 @@
 }
 
 .header .banner-wrapper .banner-1, .footer .banner-wrapper .banner-1 {
-  -webkit-transform: translateX(-90%);
-          transform: translateX(-90%);
-  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  opacity: 1;
   background: url("./img/banner1.jpg") no-repeat;
   background-size: contain;
 }
 
 .header .banner-wrapper .banner-2, .footer .banner-wrapper .banner-2 {
-  -webkit-transform: translateX(90%);
-          transform: translateX(90%);
-  opacity: 0;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  opacity: 1;
   background: url("./img/banner2.jpg") no-repeat;
   background-size: contain;
 }
