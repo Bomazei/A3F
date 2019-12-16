@@ -107,14 +107,18 @@
   width: 100%;
   padding: 0 60px;
   margin-top: 18px;
+  height: calc((99vw)/3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .header .banner-wrapper .banner, .footer .banner-wrapper .banner {
-  position: relative;
+  position: absolute;
   width: 100%;
-  height: calc((102vw)/3);
-  -webkit-transition: .7s;
-  transition: .7s;
+  height: 100%;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 .header .banner-wrapper .banner .banner-info, .footer .banner-wrapper .banner .banner-info {
@@ -170,17 +174,25 @@
 }
 
 .header .banner-wrapper .banner-1, .footer .banner-wrapper .banner-1 {
-  background: url("./img/banner.jpg") no-repeat;
+  -webkit-transform: translateX(-90%);
+          transform: translateX(-90%);
+  opacity: 0;
+  background: url("./img/banner1.jpg") no-repeat;
   background-size: contain;
 }
 
 .header .banner-wrapper .banner-2, .footer .banner-wrapper .banner-2 {
+  -webkit-transform: translateX(90%);
+          transform: translateX(90%);
+  opacity: 0;
   background: url("./img/banner2.jpg") no-repeat;
   background-size: contain;
 }
 
-.header .banner-wrapper .banner-unactive, .footer .banner-wrapper .banner-unactive {
-  display: none;
+.header .banner-wrapper .banner-active, .footer .banner-wrapper .banner-active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 
 .header .banner-wrapper .banner-nav, .footer .banner-wrapper .banner-nav {
@@ -597,16 +609,19 @@
   .bot-bar {
     display: none;
   }
+  .header .banner-wrapper {
+    padding: 0;
+    height: 280px;
+  }
   .header .banner-wrapper .banner {
-    height: 220px;
     background-color: #fff;
-    border: 2px solid #005AAD;
   }
   .header .banner-wrapper .banner .banner-info .banner-price {
     font-size: 34px;
     padding-bottom: 5%;
   }
   .header .banner-wrapper .banner .banner-info .banner-button {
+    margin-top: 10%;
     width: 94%;
     height: 70px;
     font-size: 22px;
@@ -614,7 +629,14 @@
   }
   .header .banner-wrapper .banner-nav {
     bottom: 10px;
-    left: 9%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .header .banner-wrapper .banner-nav-left, .header .banner-wrapper .banner-nav-right {
+    height: 14px;
+    width: 80px;
+    border-width: 4px;
   }
   .header .banner-wrapper .banner-nav-active {
     background-color: #005AAD;

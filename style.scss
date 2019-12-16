@@ -81,12 +81,15 @@ $color-blue: #005AAD;
         width: 100%;
         padding: 0 60px;
         margin-top: 18px;
-        
+        height: calc((99vw)/3);
+        display: flex;
         .banner {
-            position: relative;
+            position: absolute;
             width: 100%;
-            height: calc((102vw)/3);
-            transition: .7s;  
+            height: 100%;
+            transition: 1s;  
+            
+
             .banner-info {
                 padding: 93px 0 0 18%;
                 display: flex;
@@ -127,18 +130,24 @@ $color-blue: #005AAD;
             }
         }
         .banner-1 {
-            background: url('./img/banner.jpg') no-repeat;
+            transform:translateX(-90%);
+            opacity:0;
+            background: url('./img/banner1.jpg') no-repeat;
             background-size: contain;
+            
+
         }
         .banner-2 {
-            
+            transform:translateX(90%);
+            opacity:0;
             background: url('./img/banner2.jpg') no-repeat;
             background-size: contain;
+            
         }
         
-        .banner-unactive {
-            
-            display: none;
+        .banner-active {
+            transform:translateX(0);
+            opacity: 1;
         }
         
         .banner-nav {
@@ -499,16 +508,19 @@ $color-blue: #005AAD;
 
     .header {
         .banner-wrapper {
+            padding: 0;
+            height: 280px;
             .banner {
-                height: 220px;
+                
                 background-color: #fff;
-                border: 2px solid $color-blue;
+                
                 .banner-info {
                     .banner-price {
                         font-size: 34px;
                         padding-bottom: 5%;
                     }
                     .banner-button {
+                        margin-top: 10%;
                         width: 94%;
                         height: 70px;
                         font-size: 22px;
@@ -518,11 +530,18 @@ $color-blue: #005AAD;
             }
             .banner-nav {
                 bottom: 10px;
-                left: 9%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                &-left, &-right {
+                    height: 14px;
+                    width: 80px;
+                    border-width: 4px;
+                }
                 &-active {
                     background-color: $color-blue;
                     border: none;
                 }
+
             }
             
         }

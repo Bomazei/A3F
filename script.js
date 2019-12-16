@@ -8,32 +8,32 @@ const sx4 = document.querySelector('.sx4')
 navLeft.onclick = function (){
     navRight.classList.remove('banner-nav-active')
     navLeft.classList.add('banner-nav-active')
-    banner2.classList.add('banner-unactive')
-    banner1.classList.remove('banner-unactive')
+    banner1.classList.add('banner-active')
+    banner2.classList.remove('banner-active')
     sx4.classList.remove('selected')
     vitara.classList.add('selected')
 }
 navRight.onclick = function (){
     navLeft.classList.remove('banner-nav-active')
     navRight.classList.add('banner-nav-active')
-    banner1.classList.add('banner-unactive')
-    banner2.classList.remove('banner-unactive')
+    banner2.classList.add('banner-active')
+    banner1.classList.remove('banner-active')
     vitara.classList.remove('selected')
     sx4.classList.add('selected')
 }
 vitara.onclick = function (){
     navRight.classList.remove('banner-nav-active')
     navLeft.classList.add('banner-nav-active')
-    banner2.classList.add('banner-unactive')
-    banner1.classList.remove('banner-unactive')
+    banner1.classList.add('banner-active')
+    banner2.classList.remove('banner-active')
     sx4.classList.remove('selected')
     vitara.classList.add('selected')
 }
 sx4.onclick = function (){
     navLeft.classList.remove('banner-nav-active')
     navRight.classList.add('banner-nav-active')
-    banner1.classList.add('banner-unactive')
-    banner2.classList.remove('banner-unactive')
+    banner2.classList.add('banner-active')
+    banner1.classList.remove('banner-active')
     vitara.classList.remove('selected')
     sx4.classList.add('selected')
 }
