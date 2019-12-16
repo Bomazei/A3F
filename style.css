@@ -111,6 +111,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
 }
 
 .header .banner-wrapper .banner, .footer .banner-wrapper .banner {

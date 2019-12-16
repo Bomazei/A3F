@@ -83,6 +83,7 @@ $color-blue: #005AAD;
         margin-top: 18px;
         height: calc((99vw)/3);
         display: flex;
+        overflow: hidden;
         .banner {
             position: absolute;
             width: 100%;
@@ -92,6 +93,7 @@ $color-blue: #005AAD;
 
             .banner-info {
                 padding: 93px 0 0 18%;
+
                 display: flex;
                 flex-direction: column;
                 background-size: cover;
@@ -139,7 +141,7 @@ $color-blue: #005AAD;
         }
         .banner-2 {
             transform:translateX(90%);
-            opacity:0;
+            opacity: 0;
             background: url('./img/banner2.jpg') no-repeat;
             background-size: contain;
             
